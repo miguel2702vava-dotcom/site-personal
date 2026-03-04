@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Trainer | Transforme Seu Corpo e Sua Vida</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <i class="fas fa-dumbbell"></i>
+                <span>IAN<br><strong>PERSONAL</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Início</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#results">Resultados</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
+                <li><a href="#pricing">Planos</a></li>
+                <li><a href="#contact" class="btn-nav">Contato</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-badge">🏆 +0 Alunos Transformados</div>
+            <h1>TRANSFORME SEU<br><span class="highlight">CORPO</span> E SUA<br><span class="highlight">VIDA</span></h1>
+            <p class="hero-subtitle">Treinos personalizados, acompanhamento nutricional e resultados reais. 
+                Comece sua transformação hoje mesmo.</p>
+            <div class="hero-buttons">
+                <a href="#contact" class="btn btn-primary">
+                    <i class="fab fa-whatsapp"></i> Agende Sua Aula Experimental
+                </a>
+                <a href="#about" class="btn btn-outline">
+                    <i class="fas fa-play-circle"></i> Saiba Mais
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>+
+                    <span class="stat-label">Alunos</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>+
+                    <span class="stat-label">Anos de Experiência</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" data-target="0">0</span>%
+                    <span class="stat-label">Satisfação</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== SOBRE ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="img/sobre.jpg" alt="Personal Trainer" class="about-img">
+                    <div class="experience-badge">
+                        <span class="exp-number">0+</span>
+                        <span class="exp-text">Anos de<br>Experiência</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <span class="section-tag">Sobre Mim</span>
+                    <h2 class="section-title">Conheça Seu <span class="highlight">Personal Trainer</span></h2>
+                    <p class="about-text">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor 
+                        incididunt ut labore et dolore magna aliqua. Formado em Educação Física com 
+                        especialização em treinamento funcional e musculação.
+                    </p>
+                    <p class="about-text">
+                        Minha missão é ajudar você a alcançar seus objetivos de forma segura, eficiente 
+                        e prazerosa. Cada treino é único, pensado especificamente para suas necessidades 
+                        e metas.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Formação</h4>
+                                <p>CREF: 022821-G/BA</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Certificações</h4>
+                                <p>Adicione suas certificações</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Especializações</h4>
+                                <p>Adicione suas especializações</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fab fa-whatsapp"></i> Fale Comigo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVIÇOS ==================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Serviços</span>
+                <h2 class="section-title">Como Posso Te <span class="highlight">Ajudar</span></h2>
+                <p class="section-desc">Serviços personalizados para cada objetivo e necessidade</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-dumbbell"></i>
+                    </div>
+                    <h3>Musculação</h3>
+                    <p>Treinos de hipertrofia e força com periodização inteligente para resultados máximos.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento presencial</li>
+                        <li><i class="fas fa-check"></i> Avaliação física completa</li>
+                    </ul>
+                </div>
+                <div class="service-card featured">
+                    <div class="service-badge">Mais Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <h3>Treino Funcional</h3>
+                    <p>Exercícios dinâmicos para melhorar condicionamento, mobilidade e qualidade de vida.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Circuitos personalizados</li>
+                        <li><i class="fas fa-check"></i> Melhora da mobilidade</li>
+                        <li><i class="fas fa-check"></i> Emagrecimento eficiente</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Reabilitação</h3>
+                    <p>Exercícios terapêuticos para recuperação de lesões e prevenção.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Avaliação postural</li>
+                        <li><i class="fas fa-check"></i> Exercícios corretivos</li>
+                        <li><i class="fas fa-check"></i> Prevenção de lesões</li>
+                    </ul>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Treino em Grupo</h3>
+                    <p>Aulas coletivas com até 4 pessoas para quem gosta de treinar em companhia.</p>
+                    <ul class="service-list">
+                        <li><i class="fas fa-check"></i> Até 4 alunos</li>
+                        <li><i class="fas fa-check"></i> Valor acessível</li>
+                        <li><i class="fas fa-check"></i> Motivação em grupo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== RESULTADOS ==================== -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Transformações</span>
+                <h2 class="section-title">Resultados <span class="highlight">Reais</span></h2>
+                <p class="section-desc">Veja algumas das transformações dos meus alunos</p>
+            </div>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before">
+                            <span class="result-label">Antes</span>
+                            <div class="result-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Antes</span>
+                            </div>
+                        </div>
+                        <div class="result-after">
+                            <span class="result-label">Depois</span>
+                            <div class="result-placeholder after">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-info">
+                        <h4>Nome do Aluno</h4>
+                        <p>Perdeu Xkg em X meses</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before">
+                            <span class="result-label">Antes</span>
+                            <div class="result-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Antes</span>
+                            </div>
+                        </div>
+                        <div class="result-after">
+                            <span class="result-label">Depois</span>
+                            <div class="result-placeholder after">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-info">
+                        <h4>Nome do Aluno</h4>
+                        <p>Ganhou Xkg de massa em X meses</p>
+                    </div>
+                </div>
+                <div class="result-card">
+                    <div class="result-images">
+                        <div class="result-before">
+                            <span class="result-label">Antes</span>
+                            <div class="result-placeholder">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Antes</span>
+                            </div>
+                        </div>
+                        <div class="result-after">
+                            <span class="result-label">Depois</span>
+                            <div class="result-placeholder after">
+                                <i class="fas fa-image"></i>
+                                <span>Foto Depois</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="result-info">
+                        <h4>Nome do Aluno</h4>
+                        <p>Transformação completa em X meses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== DEPOIMENTOS ==================== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Depoimentos</span>
+                <h2 class="section-title">O Que Meus Alunos <span class="highlight">Dizem</span></h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Melhor decisão que tomei foi começar a treinar com este profissional incrível!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>Nome do Aluno</h4>
+                                <span>Aluno há X meses</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Profissional dedicado e atencioso. Os treinos são desafiadores mas sempre respeitando meus limites. Recomendo de olhos fechados!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>Nome do Aluno</h4>
+                                <span>Aluno há X anos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Consegui resultados que nunca imaginei! Os treinos são muito bem planejados e o acompanhamento é de primeira qualidade."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h4>Nome do Aluno</h4>
+                                <span>Aluno há X meses</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots" id="sliderDots"></div>
+                    <button class="slider-btn next" id="nextBtn" aria-label="Próximo">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PLANOS ==================== -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Planos</span>
+                <h2 class="section-title">Invista na Sua <span class="highlight">Saúde</span></h2>
+                <p class="section-desc">Escolha o plano ideal para seus objetivos</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Básico</h3>
+                        <p>Para quem está começando</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">XXX</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 2x por semana</li>
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Avaliação física</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento via app</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Orientação nutricional</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Treino nos feriados</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline btn-block">Começar Agora</a>
+                </div>
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Mais Escolhido</div>
+                    <div class="pricing-header">
+                        <h3>Premium</h3>
+                        <p>O mais completo</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">XXX</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 4x por semana</li>
+                        <li><i class="fas fa-check"></i> Treino personalizado</li>
+                        <li><i class="fas fa-check"></i> Avaliação física mensal</li>
+                        <li><i class="fas fa-check"></i> Acompanhamento via app</li>
+                        <li><i class="fas fa-check"></i> Orientação nutricional</li>
+                        <li><i class="fas fa-check"></i> Suporte WhatsApp 24h</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-block">Começar Agora</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Online</h3>
+                        <p>Treine onde quiser</p>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">R$</span>
+                        <span class="amount">XXX</span>
+                        <span class="period">/mês</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Planilha personalizada</li>
+                        <li><i class="fas fa-check"></i> Vídeos explicativos</li>
+                        <li><i class="fas fa-check"></i> Avaliação por foto/vídeo</li>
+                        <li><i class="fas fa-check"></i> Ajustes semanais</li>
+                        <li><i class="fas fa-check"></i> Suporte via WhatsApp</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Acompanhamento presencial</li>
+                    </ul>
+                    <a href="#contact" class="btn  btn-outline btn-block">Começar Agora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="cta">
+        <div class="cta-overlay"></div>
+        <div class="container cta-content">
+            <h2>Pronto Para Começar Sua <span class="highlight">Transformação</span>?</h2>
+            <p>Agende sua aula experimental gratuita e dê o primeiro passo rumo ao corpo dos seus sonhos.</p>
+            <a href="#contact" class="btn btn-primary btn-lg">
+                <i class="fab fa-whatsapp"></i> Quero Minha Aula Experimental
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== CONTATO ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Contato</span>
+                <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
+                <p class="section-desc">Fale comigo e comece sua transformação hoje mesmo</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <div>
+                            <h4>WhatsApp</h4>
+                            <p>(61) 99690-8904</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>jmsouza@icloud.com </p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4>Localização</h4>
+                            <p>Macaúbas-BA</p>
+                        </div>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4>Horário</h4>
+                            <p>Seg - Sex: 06h às 21h<br>Sáb: 07h às 12h</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/ian.personal_/" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" class="social-link" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Seu nome completo" required>
+                        <label for="name">Ian Personal</label>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="(XX) XXXXX-XXXX" required>
+                            <label for="phone">WhatsApp</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="seuemail@email.com" required>
+                            <label for="email">E-mail</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <select id="service" required>
+                            <option value="" disabled selected>Selecione um serviço</option>
+                            <option value="musculacao">Musculação</option>
+                            <option value="funcional">Treino Funcional</option>
+                            <option value="reabilitacao">Reabilitação</option>
+                            <option value="grupo">Treino em Grupo</option>
+                            <option value="outro">Outro</option>
+                        </select>
+                        <label for="service">Serviço de Interesse</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="4" placeholder="Conte-me sobre seus objetivos..." required></textarea>
+                        <label for="message">Mensagem</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i> Enviar Mensagem
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="logo">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>NOME DO<br><strong>PERSONAL</strong></span>
+                    </a>
+                    <p>Transformando vidas através do exercício físico. Seu corpo é seu maior patrimônio.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#pricing">Planos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="#services">Musculação</a></li>
+                        <li><a href="#services">Treino Funcional</a></li>
+                        <li><a href="#services">Reabilitação</a></li>
+                        <li><a href="#services">Treino em Grupo</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Dicas Fitness</h4>
+                    <p>Receba dicas de treino e nutrição no seu e-mail.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Seu e-mail">
+                        <button type="submit"><i class="fas fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Ian Personal. Todos os direitos reservados.</p>
+                <p>CREF: 022821-G/BA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/5561996908904" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
