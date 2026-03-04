@@ -275,68 +275,56 @@
                 <span class="section-tag">Depoimentos</span>
                 <h2 class="section-title">O Que Meus Alunos <span class="highlight">Dizem</span></h2>
             </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-track" id="testimonialTrack">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Melhor decisão que tomei foi começar a treinar com este profissional incrível!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4>Nome do Aluno</h4>
-                                <span>Aluno há X meses</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Profissional dedicado e atencioso. Os treinos são desafiadores mas sempre respeitando meus limites. Recomendo de olhos fechados!"</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4>Nome do Aluno</h4>
-                                <span>Aluno há X anos</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">
-                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                        </div>
-                        <p class="testimonial-text">"Consegui resultados que nunca imaginei! Os treinos são muito bem planejados e o acompanhamento é de primeira qualidade."</p>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i class="fas fa-user"></i>
-                            </div>
-                            <div>
-                                <h4>Nome do Aluno</h4>
-                                <span>Aluno há X meses</span>
-                            </div>
-                        </div>
-                    </div>
+
+            <!-- Depoimentos dos alunos (adicionar aqui quando receber) -->
+            <!-- <div class="testimonials-slider">...</div> -->
+
+            <div class="no-testimonials">
+                <i class="fas fa-comments"></i>
+                <p>Seja o primeiro a deixar seu depoimento!</p>
+            </div>
+
+            <!-- Formulário de Depoimento -->
+            <div class="testimonial-form-wrapper">
+                <div class="testimonial-form-header">
+                    <i class="fas fa-comment-dots"></i>
+                    <h3>Deixe Seu <span class="highlight">Depoimento</span></h3>
+                    <p>É aluno? Conte sua experiência!</p>
                 </div>
-                <div class="slider-controls">
-                    <button class="slider-btn prev" id="prevBtn" aria-label="Anterior">
-                        <i class="fas fa-chevron-left"></i>
+                <form class="testimonial-form" id="testimonialForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <input type="text" id="testimonialName" placeholder="Seu nome" required>
+                            <label for="testimonialName">Nome</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="testimonialTime" placeholder="Ex: 6 meses" required>
+                            <label for="testimonialTime">Há quanto tempo treina?</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="star-rating" id="starRating">
+                            <span class="rating-label">Sua avaliação:</span>
+                            <div class="stars-input">
+                                <i class="fas fa-star" data-rating="1"></i>
+                                <i class="fas fa-star" data-rating="2"></i>
+                                <i class="fas fa-star" data-rating="3"></i>
+                                <i class="fas fa-star" data-rating="4"></i>
+                                <i class="fas fa-star" data-rating="5"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="testimonialMsg" rows="4" placeholder="Conte como foi sua experiência..." required></textarea>
+                        <label for="testimonialMsg">Seu depoimento</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fab fa-whatsapp"></i> Enviar Depoimento
                     </button>
-                    <div class="slider-dots" id="sliderDots"></div>
-                    <button class="slider-btn next" id="nextBtn" aria-label="Próximo">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
-
-    <!-- ==================== PLANOS ==================== -->
     <section class="pricing" id="pricing">
         <div class="container">
             <div class="section-header">

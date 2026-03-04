@@ -101,93 +101,94 @@ if (heroStats) heroObserver.observe(heroStats);
 
 // ==================== TESTIMONIALS SLIDER ====================
 const track = document.getElementById('testimonialTrack');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
-const dotsContainer = document.getElementById('sliderDots');
-const cards = track.querySelectorAll('.testimonial-card');
 
-let currentSlide = 0;
-let slidesPerView = 3;
-let maxSlide = 0;
+if (track) {
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const dotsContainer = document.getElementById('sliderDots');
+    const cards = track.querySelectorAll('.testimonial-card');
 
-function updateSlidesPerView() {
-    if (window.innerWidth <= 768) {
-        slidesPerView = 1;
-    } else if (window.innerWidth <= 1024) {
-        slidesPerView = 2;
-    } else {
-        slidesPerView = 3;
+    let currentSlide = 0;
+    let slidesPerView = 3;
+    let maxSlide = 0;
+
+    function updateSlidesPerView() {
+        if (window.innerWidth <= 768) {
+            slidesPerView = 1;
+        } else if (window.innerWidth <= 1024) {
+            slidesPerView = 2;
+        } else {
+            slidesPerView = 3;
+        }
+        maxSlide = Math.max(0, cards.length - slidesPerView);
+        currentSlide = Math.min(currentSlide, maxSlide);
+        updateSlider();
+        createDots();
     }
-    maxSlide = Math.max(0, cards.length - slidesPerView);
-    currentSlide = Math.min(currentSlide, maxSlide);
-    updateSlider();
-    createDots();
-}
 
-function updateSlider() {
-    const gap = 25;
-    const cardWidth = (track.parentElement.offsetWidth - (gap * (slidesPerView - 1))) / slidesPerView;
-    
-    cards.forEach(card => {
-        card.style.minWidth = `${cardWidth}px`;
-    });
-    
-    const offset = currentSlide * (cardWidth + gap);
-    track.style.transform = `translateX(-${offset}px)`;
-    
-    updateDots();
-}
-
-function createDots() {
-    dotsContainer.innerHTML = '';
-    const totalDots = maxSlide + 1;
-    
-    for (let i = 0; i < totalDots; i++) {
-        const dot = document.createElement('div');
-        dot.classList.add('slider-dot');
-        if (i === currentSlide) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            currentSlide = i;
-            updateSlider();
+    function updateSlider() {
+        const gap = 25;
+        const cardWidth = (track.parentElement.offsetWidth - (gap * (slidesPerView - 1))) / slidesPerView;
+        
+        cards.forEach(card => {
+            card.style.minWidth = `${cardWidth}px`;
         });
-        dotsContainer.appendChild(dot);
+        
+        const offset = currentSlide * (cardWidth + gap);
+        track.style.transform = `translateX(-${offset}px)`;
+        
+        updateDots();
     }
-}
 
-function updateDots() {
-    const dots = dotsContainer.querySelectorAll('.slider-dot');
-    dots.forEach((dot, i) => {
-        dot.classList.toggle('active', i === currentSlide);
+    function createDots() {
+        dotsContainer.innerHTML = '';
+        const totalDots = maxSlide + 1;
+        
+        for (let i = 0; i < totalDots; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('slider-dot');
+            if (i === currentSlide) dot.classList.add('active');
+            dot.addEventListener('click', () => {
+                currentSlide = i;
+                updateSlider();
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateDots() {
+        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === currentSlide);
+        });
+    }
+
+    prevBtn.addEventListener('click', () => {
+        currentSlide = Math.max(0, currentSlide - 1);
+        updateSlider();
     });
-}
 
-prevBtn.addEventListener('click', () => {
-    currentSlide = Math.max(0, currentSlide - 1);
-    updateSlider();
-});
+    nextBtn.addEventListener('click', () => {
+        currentSlide = Math.min(maxSlide, currentSlide + 1);
+        updateSlider();
+    });
 
-nextBtn.addEventListener('click', () => {
-    currentSlide = Math.min(maxSlide, currentSlide + 1);
-    updateSlider();
-});
-
-// Auto-slide
-let autoSlide = setInterval(() => {
-    currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
-    updateSlider();
-}, 5000);
-
-// Pause auto-slide on hover
-track.addEventListener('mouseenter', () => clearInterval(autoSlide));
-track.addEventListener('mouseleave', () => {
-    autoSlide = setInterval(() => {
+    let autoSlide = setInterval(() => {
         currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
         updateSlider();
     }, 5000);
-});
 
-window.addEventListener('resize', updateSlidesPerView);
-updateSlidesPerView();
+    track.addEventListener('mouseenter', () => clearInterval(autoSlide));
+    track.addEventListener('mouseleave', () => {
+        autoSlide = setInterval(() => {
+            currentSlide = currentSlide >= maxSlide ? 0 : currentSlide + 1;
+            updateSlider();
+        }, 5000);
+    });
+
+    window.addEventListener('resize', updateSlidesPerView);
+    updateSlidesPerView();
+}
 
 // ==================== SCROLL REVEAL ANIMATION ====================
 function revealOnScroll() {
@@ -220,6 +221,68 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 window.addEventListener('scroll', revealOnScroll);
+
+// ==================== STAR RATING ====================
+const starsInput = document.querySelectorAll('.stars-input i');
+let selectedRating = 0;
+
+starsInput.forEach(star => {
+    star.addEventListener('click', () => {
+        selectedRating = parseInt(star.getAttribute('data-rating'));
+        starsInput.forEach((s, index) => {
+            s.classList.toggle('active', index < selectedRating);
+        });
+    });
+
+    star.addEventListener('mouseenter', () => {
+        const rating = parseInt(star.getAttribute('data-rating'));
+        starsInput.forEach((s, index) => {
+            s.style.color = index < rating ? '#FFD700' : '';
+        });
+    });
+});
+
+document.querySelector('.stars-input').addEventListener('mouseleave', () => {
+    starsInput.forEach((s, index) => {
+        s.style.color = '';
+    });
+});
+
+// ==================== TESTIMONIAL FORM ====================
+const testimonialForm = document.getElementById('testimonialForm');
+
+testimonialForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const name = document.getElementById('testimonialName').value;
+    const time = document.getElementById('testimonialTime').value;
+    const msg = document.getElementById('testimonialMsg').value;
+    const stars = '⭐'.repeat(selectedRating || 5);
+    
+    const whatsappMessage = encodeURIComponent(
+        `📝 *Novo Depoimento do Site*\n\n` +
+        `*Nome:* ${name}\n` +
+        `*Tempo de treino:* ${time}\n` +
+        `*Avaliação:* ${stars}\n` +
+        `*Depoimento:* "${msg}"`
+    );
+    
+    const whatsappNumber = '5561996908904';
+    window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+    
+    const submitBtn = testimonialForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.innerHTML;
+    submitBtn.innerHTML = '<i class="fas fa-check"></i> Depoimento Enviado!';
+    submitBtn.style.background = 'var(--success)';
+    
+    setTimeout(() => {
+        submitBtn.innerHTML = originalText;
+        submitBtn.style.background = '';
+        testimonialForm.reset();
+        selectedRating = 0;
+        starsInput.forEach(s => s.classList.remove('active'));
+    }, 3000);
+});
 
 // ==================== FORM HANDLING ====================
 const contactForm = document.getElementById('contactForm');
