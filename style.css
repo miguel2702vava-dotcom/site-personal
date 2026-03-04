@@ -833,6 +833,64 @@ img {
     border-radius: 5px;
 }
 
+/* ==================== LIVE TESTIMONIALS ==================== */
+.testimonials-live {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.testimonial-card-live {
+    background: var(--dark-2);
+    border-radius: var(--radius-lg);
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.testimonial-card-live .testimonial-stars {
+    color: #FFD700;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    display: flex;
+    gap: 3px;
+}
+
+.testimonial-card-live .testimonial-text {
+    color: var(--gray-light);
+    font-size: 0.95rem;
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.testimonial-card-live .testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.testimonial-card-live .author-avatar {
+    width: 45px;
+    height: 45px;
+    background: rgba(255, 107, 53, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    font-size: 1.2rem;
+}
+
+.testimonial-card-live h4 {
+    font-size: 0.95rem;
+}
+
+.testimonial-card-live span {
+    font-size: 0.8rem;
+    color: var(--gray);
+}
+
 /* ==================== NO TESTIMONIALS MESSAGE ==================== */
 .no-testimonials {
     text-align: center;

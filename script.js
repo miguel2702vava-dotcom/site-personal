@@ -251,24 +251,69 @@ document.querySelector('.stars-input').addEventListener('mouseleave', () => {
 // ==================== TESTIMONIAL FORM ====================
 const testimonialForm = document.getElementById('testimonialForm');
 
+// Adicionar depoimento visualmente no site
+function addTestimonialToPage(name, time, rating, message) {
+    const noTestimonials = document.querySelector('.no-testimonials');
+    if (noTestimonials) noTestimonials.style.display = 'none';
+
+    // Criar ou pegar o container de depoimentos
+    let container = document.querySelector('.testimonials-live');
+    if (!container) {
+        container = document.createElement('div');
+        container.className = 'testimonials-live';
+        const formWrapper = document.querySelector('.testimonial-form-wrapper');
+        formWrapper.parentNode.insertBefore(container, formWrapper);
+    }
+
+    const starsHTML = Array.from({length: 5}, (_, i) => 
+        `<i class="fas fa-star" style="color: ${i < rating ? '#FFD700' : 'rgba(255,255,255,0.15)'}"></i>`
+    ).join('');
+
+    const card = document.createElement('div');
+    card.className = 'testimonial-card-live';
+    card.innerHTML = `
+        <div class="testimonial-stars">${starsHTML}</div>
+        <p class="testimonial-text">"${message}"</p>
+        <div class="testimonial-author">
+            <div class="author-avatar"><i class="fas fa-user"></i></div>
+            <div>
+                <h4>${name}</h4>
+                <span>Aluno há ${time}</span>
+            </div>
+        </div>
+    `;
+    
+    card.style.animation = 'fadeInUp 0.6s ease';
+    container.prepend(card);
+}
+
 testimonialForm.addEventListener('submit', (e) => {
     e.preventDefault();
     
     const name = document.getElementById('testimonialName').value;
     const time = document.getElementById('testimonialTime').value;
     const msg = document.getElementById('testimonialMsg').value;
-    const stars = '⭐'.repeat(selectedRating || 5);
+    const rating = selectedRating || 5;
+    const starsText = '★'.repeat(rating) + '☆'.repeat(5 - rating);
     
     const whatsappMessage = encodeURIComponent(
-        `📝 *Novo Depoimento do Site*\n\n` +
-        `*Nome:* ${name}\n` +
-        `*Tempo de treino:* ${time}\n` +
-        `*Avaliação:* ${stars}\n` +
-        `*Depoimento:* "${msg}"`
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `📝  *NOVO DEPOIMENTO*\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n\n` +
+        `👤 *Nome:* ${name}\n` +
+        `⏱️ *Treina há:* ${time}\n` +
+        `⭐ *Avaliação:* ${starsText}\n\n` +
+        `💬 *Depoimento:*\n` +
+        `"${msg}"\n\n` +
+        `━━━━━━━━━━━━━━━━━━━━\n` +
+        `_Enviado pelo site_ 🌐`
     );
     
-    const whatsappNumber = '5577999909852';
+    const whatsappNumber = '5561996908904';
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
+    
+    // Mostrar depoimento no site
+    addTestimonialToPage(name, time, rating, msg);
     
     const submitBtn = testimonialForm.querySelector('button[type="submit"]');
     const originalText = submitBtn.innerHTML;
