@@ -267,7 +267,7 @@ testimonialForm.addEventListener('submit', (e) => {
         `*Depoimento:* "${msg}"`
     );
     
-    const whatsappNumber = '5561996908904';
+    const whatsappNumber = '5577999909852';
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
     
     const submitBtn = testimonialForm.querySelector('button[type="submit"]');
